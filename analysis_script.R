@@ -172,7 +172,7 @@ cohens_f(null_model.new, model2 = model1, alternative = 'two.sided')   # compute
 
 olsrr::ols_test_normality(model1)            # residuals are normal
 olsrr::ols_test_breusch_pagan(model1)        # homoskedasticity is normal
-any(olsrr::ols_coll_diag(model1)$vif_t$VIF > 2)   # no VIF > 5
+any(olsrr::ols_coll_diag(model1)$vif_t$VIF > 2)   # no VIF > 2
 
 summary(model1)                         # assess the behavior of each covariate in the model
 sqrt(mean(model1$residuals^2))          # RMSE
